@@ -27,7 +27,6 @@ const item4 = {
 async function main() {
     const contenedor = new Contenedor('./productos.txt')
 
-    
     let datos1 = await contenedor.getAll()
     console.log(datos1)
 
@@ -49,10 +48,12 @@ async function main() {
     let id3 = await contenedor.save(item4)
     console.log(id3)
 
+    // Borra id 1
     await contenedor.deleteById(1)
     let delete1 = await contenedor.getAll()
     console.log(delete1)
 
+    // Borra todos
     await contenedor.deleteAll()
     let delete2 = await contenedor.getAll()
     console.log(delete2)
